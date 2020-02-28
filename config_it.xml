@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ghyzamsync</name>
+    <displayName><![CDATA[Ghyzam Sync per RD04]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Modulo per la sincronizzazione con RD04 Erp]]></description>
+    <author><![CDATA[Bloom Design]]></author>
+    <tab><![CDATA[administration]]></tab>
+	<confirmUninstall><![CDATA[Sei sicuro di voler disinstallare il modulo?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

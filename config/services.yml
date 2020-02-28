@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    runsync_command:
+        class: BloomDesign\GhyzamSync\Command\RunSyncCommand
+        public: true
+        tags:
+            - { name: 'console.command' }

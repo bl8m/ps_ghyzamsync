@@ -1,0 +1,849 @@
+// ASSEGNO
+/var/www/html/modules/ghyzamsync/classes/GhyzamCatalog.php:322:
+object(Order)[263]
+  public 'id_address_delivery' => int 8
+  public 'id_address_invoice' => int 8
+  public 'id_shop_group' => int 1
+  public 'id_shop' => int 1
+  public 'id_cart' => int 61
+  public 'id_currency' => int 1
+  public 'id_lang' => int 1
+  public 'id_customer' => int 5
+  public 'id_carrier' => int 1
+  public 'current_state' => null
+  public 'secure_key' => string '4f06eb29bedd00fd212749c2685935f6' (length=32)
+  public 'payment' => string 'Assegno' (length=7)
+  public 'module' => string 'ps_checkpayment' (length=15)
+  public 'conversion_rate' => string '1.000000' (length=8)
+  public 'recyclable' => string '0' (length=1)
+  public 'gift' => int 0
+  public 'gift_message' => string '' (length=0)
+  public 'mobile_theme' => string '0' (length=1)
+  public 'shipping_number' => null
+  public 'total_discounts' => float 0
+  public 'total_discounts_tax_incl' => float 0
+  public 'total_discounts_tax_excl' => float 0
+  public 'total_paid' => float 36
+  public 'total_paid_tax_incl' => float 36
+  public 'total_paid_tax_excl' => float 29.51
+  public 'total_paid_real' => int 0
+  public 'total_products' => float 29.51
+  public 'total_products_wt' => float 36
+  public 'total_shipping' => float 0
+  public 'total_shipping_tax_incl' => float 0
+  public 'total_shipping_tax_excl' => float 0
+  public 'carrier_tax_rate' => float 22
+  public 'total_wrapping' => float 0
+  public 'total_wrapping_tax_incl' => float 0
+  public 'total_wrapping_tax_excl' => float 0
+  public 'invoice_number' => null
+  public 'delivery_number' => null
+  public 'invoice_date' => string '0000-00-00 00:00:00' (length=19)
+  public 'delivery_date' => string '0000-00-00 00:00:00' (length=19)
+  public 'valid' => null
+  public 'date_add' => string '2019-12-15 18:43:24' (length=19)
+  public 'date_upd' => string '2019-12-15 18:43:24' (length=19)
+  public 'reference' => string 'OKFKQURDE' (length=9)
+  public 'round_mode' => string '2' (length=1)
+  public 'round_type' => string '2' (length=1)
+  protected 'webserviceParameters' => 
+    array (size=5)
+      'objectMethods' => 
+        array (size=1)
+          'add' => string 'addWs' (length=5)
+      'objectNodeName' => string 'order' (length=5)
+      'objectsNodeName' => string 'orders' (length=6)
+      'fields' => 
+        array (size=17)
+          'id_address_delivery' => 
+            array (size=1)
+              ...
+          'id_address_invoice' => 
+            array (size=1)
+              ...
+          'id_cart' => 
+            array (size=1)
+              ...
+          'id_currency' => 
+            array (size=1)
+              ...
+          'id_lang' => 
+            array (size=1)
+              ...
+          'id_customer' => 
+            array (size=1)
+              ...
+          'id_carrier' => 
+            array (size=1)
+              ...
+          'current_state' => 
+            array (size=2)
+              ...
+          'module' => 
+            array (size=1)
+              ...
+          'invoice_number' => 
+            array (size=0)
+              ...
+          'invoice_date' => 
+            array (size=0)
+              ...
+          'delivery_number' => 
+            array (size=0)
+              ...
+          'delivery_date' => 
+            array (size=0)
+              ...
+          'valid' => 
+            array (size=0)
+              ...
+          'date_add' => 
+            array (size=0)
+              ...
+          'date_upd' => 
+            array (size=0)
+              ...
+          'shipping_number' => 
+            array (size=2)
+              ...
+      'associations' => 
+        array (size=1)
+          'order_rows' => 
+            array (size=4)
+              ...
+  protected '_taxCalculationMethod' => string '0' (length=1)
+  protected 'cacheCustomer' => null
+  public 'id' => string '41' (length=2)
+  public 'id_shop_list' => 
+    array (size=0)
+      empty
+  protected 'get_shop_from_context' => boolean true
+  protected 'table' => string 'orders' (length=6)
+  protected 'identifier' => string 'id_order' (length=8)
+  protected 'fieldsRequired' => 
+    array (size=14)
+      0 => string 'id_address_delivery' (length=19)
+      1 => string 'id_address_invoice' (length=18)
+      2 => string 'id_cart' (length=7)
+      3 => string 'id_currency' (length=11)
+      4 => string 'id_lang' (length=7)
+      5 => string 'id_customer' (length=11)
+      6 => string 'id_carrier' (length=10)
+      7 => string 'payment' (length=7)
+      8 => string 'module' (length=6)
+      9 => string 'total_paid' (length=10)
+      10 => string 'total_paid_real' (length=15)
+      11 => string 'total_products' (length=14)
+      12 => string 'total_products_wt' (length=17)
+      13 => string 'conversion_rate' (length=15)
+  protected 'fieldsSize' => 
+    array (size=0)
+      empty
+  protected 'fieldsValidate' => 
+    array (size=39)
+      'id_address_delivery' => string 'isUnsignedId' (length=12)
+      'id_address_invoice' => string 'isUnsignedId' (length=12)
+      'id_cart' => string 'isUnsignedId' (length=12)
+      'id_currency' => string 'isUnsignedId' (length=12)
+      'id_shop_group' => string 'isUnsignedId' (length=12)
+      'id_shop' => string 'isUnsignedId' (length=12)
+      'id_lang' => string 'isUnsignedId' (length=12)
+      'id_customer' => string 'isUnsignedId' (length=12)
+      'id_carrier' => string 'isUnsignedId' (length=12)
+      'current_state' => string 'isUnsignedId' (length=12)
+      'secure_key' => string 'isMd5' (length=5)
+      'payment' => string 'isGenericName' (length=13)
+      'module' => string 'isModuleName' (length=12)
+      'recyclable' => string 'isBool' (length=6)
+      'gift' => string 'isBool' (length=6)
+      'gift_message' => string 'isMessage' (length=9)
+      'mobile_theme' => string 'isBool' (length=6)
+      'total_discounts' => string 'isPrice' (length=7)
+      'total_discounts_tax_incl' => string 'isPrice' (length=7)
+      'total_discounts_tax_excl' => string 'isPrice' (length=7)
+      'total_paid' => string 'isPrice' (length=7)
+      'total_paid_tax_incl' => string 'isPrice' (length=7)
+      'total_paid_tax_excl' => string 'isPrice' (length=7)
+      'total_paid_real' => string 'isPrice' (length=7)
+      'total_products' => string 'isPrice' (length=7)
+      'total_products_wt' => string 'isPrice' (length=7)
+      'total_shipping' => string 'isPrice' (length=7)
+      'total_shipping_tax_incl' => string 'isPrice' (length=7)
+      'total_shipping_tax_excl' => string 'isPrice' (length=7)
+      'carrier_tax_rate' => string 'isFloat' (length=7)
+      'total_wrapping' => string 'isPrice' (length=7)
+      'total_wrapping_tax_incl' => string 'isPrice' (length=7)
+      'total_wrapping_tax_excl' => string 'isPrice' (length=7)
+      'round_mode' => string 'isUnsignedId' (length=12)
+      'round_type' => string 'isUnsignedId' (length=12)
+      'shipping_number' => string 'isTrackingNumber' (length=16)
+      'conversion_rate' => string 'isFloat' (length=7)
+      'date_add' => string 'isDate' (length=6)
+      'date_upd' => string 'isDate' (length=6)
+  protected 'fieldsRequiredLang' => 
+    array (size=0)
+      empty
+  protected 'fieldsSizeLang' => 
+    array (size=0)
+      empty
+  protected 'fieldsValidateLang' => 
+    array (size=0)
+      empty
+  protected 'tables' => 
+    array (size=0)
+      empty
+  protected 'image_dir' => null
+  protected 'image_format' => string 'jpg' (length=3)
+  protected 'translator' => null
+  protected 'def' => 
+    array (size=4)
+      'table' => string 'orders' (length=6)
+      'primary' => string 'id_order' (length=8)
+      'fields' => 
+        array (size=45)
+          'id_address_delivery' => 
+            array (size=3)
+              ...
+          'id_address_invoice' => 
+            array (size=3)
+              ...
+          'id_cart' => 
+            array (size=3)
+              ...
+          'id_currency' => 
+            array (size=3)
+              ...
+          'id_shop_group' => 
+            array (size=2)
+              ...
+          'id_shop' => 
+            array (size=2)
+              ...
+          'id_lang' => 
+            array (size=3)
+              ...
+          'id_customer' => 
+            array (size=3)
+              ...
+          'id_carrier' => 
+            array (size=3)
+              ...
+          'current_state' => 
+            array (size=2)
+              ...
+          'secure_key' => 
+            array (size=2)
+              ...
+          'payment' => 
+            array (size=3)
+              ...
+          'module' => 
+            array (size=3)
+              ...
+          'recyclable' => 
+            array (size=2)
+              ...
+          'gift' => 
+            array (size=2)
+              ...
+          'gift_message' => 
+            array (size=2)
+              ...
+          'mobile_theme' => 
+            array (size=2)
+              ...
+          'total_discounts' => 
+            array (size=2)
+              ...
+          'total_discounts_tax_incl' => 
+            array (size=2)
+              ...
+          'total_discounts_tax_excl' => 
+            array (size=2)
+              ...
+          'total_paid' => 
+            array (size=3)
+              ...
+          'total_paid_tax_incl' => 
+            array (size=2)
+              ...
+          'total_paid_tax_excl' => 
+            array (size=2)
+              ...
+          'total_paid_real' => 
+            array (size=3)
+              ...
+          'total_products' => 
+            array (size=3)
+              ...
+          'total_products_wt' => 
+            array (size=3)
+              ...
+          'total_shipping' => 
+            array (size=2)
+              ...
+          'total_shipping_tax_incl' => 
+            array (size=2)
+              ...
+          'total_shipping_tax_excl' => 
+            array (size=2)
+              ...
+          'carrier_tax_rate' => 
+            array (size=2)
+              ...
+          'total_wrapping' => 
+            array (size=2)
+              ...
+          'total_wrapping_tax_incl' => 
+            array (size=2)
+              ...
+          'total_wrapping_tax_excl' => 
+            array (size=2)
+              ...
+          'round_mode' => 
+            array (size=2)
+              ...
+          'round_type' => 
+            array (size=2)
+              ...
+          'shipping_number' => 
+            array (size=2)
+              ...
+          'conversion_rate' => 
+            array (size=3)
+              ...
+          'invoice_number' => 
+            array (size=1)
+              ...
+          'delivery_number' => 
+            array (size=1)
+              ...
+          'invoice_date' => 
+            array (size=1)
+              ...
+          'delivery_date' => 
+            array (size=1)
+              ...
+          'valid' => 
+            array (size=1)
+              ...
+          'reference' => 
+            array (size=1)
+              ...
+          'date_add' => 
+            array (size=2)
+              ...
+          'date_upd' => 
+            array (size=2)
+              ...
+      'classname' => string 'Order' (length=5)
+  protected 'update_fields' => null
+  public 'force_id' => boolean false
+  public 'product_list' => 
+    array (size=1)
+      0 => 
+        array (size=71)
+          'id_product_attribute' => string '0' (length=1)
+          'id_product' => string '294' (length=3)
+          'cart_quantity' => string '1' (length=1)
+          'id_shop' => string '1' (length=1)
+          'id_customization' => null
+          'name' => string 'RINOWASH KIT AZZ CAMPANA UNIV' (length=29)
+          'is_virtual' => string '0' (length=1)
+          'description_short' => string 'AEROSOL PER ALTE VIE RESPIRATORIA RINOWASH AZZURRO 471221 CON CAMPANA UNIVERSALE' (length=80)
+          'available_now' => string '1' (length=1)
+          'available_later' => string '' (length=0)
+          'id_category_default' => string '12' (length=2)
+          'id_supplier' => string '0' (length=1)
+          'id_manufacturer' => string '6' (length=1)
+          'manufacturer_name' => string 'AIR LIQUIDE MEDICAL SYST. SpA' (length=29)
+          'on_sale' => string '0' (length=1)
+          'ecotax' => string '0.000000' (length=8)
+          'additional_shipping_cost' => string '0.00' (length=4)
+          'available_for_order' => string '1' (length=1)
+          'show_price' => string '1' (length=1)
+          'price' => float 29.51
+          'active' => string '1' (length=1)
+          'unity' => string '' (length=0)
+          'unit_price_ratio' => string '0.000000' (length=8)
+          'quantity_available' => string '3325' (length=4)
+          'width' => string '0.000000' (length=8)
+          'height' => string '0.000000' (length=8)
+          'depth' => string '0.000000' (length=8)
+          'out_of_stock' => string '2' (length=1)
+          'weight' => float 0
+          'available_date' => string '0000-00-00' (length=10)
+          'date_add' => string '2019-08-16 17:40:43' (length=19)
+          'date_upd' => string '2019-09-26 11:09:02' (length=19)
+          'quantity' => int 1
+          'link_rewrite' => string 'rinowash-kit-azz-campana-univ' (length=29)
+          'category' => string 'dispositivi-medici' (length=18)
+          'unique_id' => string '0000000294000000000080' (length=22)
+          'id_address_delivery' => string '8' (length=1)
+          'advanced_stock_management' => string '0' (length=1)
+          'supplier_reference' => null
+          'customization_quantity' => null
+          'price_attribute' => null
+          'ecotax_attr' => null
+          'reference' => string '904734643' (length=9)
+          'weight_attribute' => null
+          'ean13' => string '8015662712217' (length=13)
+          'isbn' => string '' (length=0)
+          'upc' => string '' (length=0)
+          'minimal_quantity' => string '1' (length=1)
+          'wholesale_price' => string '0.000000' (length=8)
+          'id_image' => string '294-295' (length=7)
+          'legend' => string '' (length=0)
+          'reduction_type' => int 0
+          'is_gift' => boolean false
+          'reduction' => float 0
+          'price_without_reduction' => float 36.0022
+          'specific_prices' => 
+            array (size=0)
+              ...
+          'stock_quantity' => int 3325
+          'price_with_reduction' => float 36.0022
+          'price_with_reduction_without_tax' => float 29.51
+          'total' => float 29.51
+          'total_wt' => float 36
+          'price_wt' => float 36.0022
+          'reduction_applies' => boolean false
+          'quantity_discount_applies' => boolean false
+          'allow_oosp' => int 0
+          'features' => 
+            array (size=0)
+              ...
+          'rate' => float 22
+          'tax_name' => string 'IVA IT 22%' (length=10)
+          'warehouse_list' => 
+            array (size=1)
+              ...
+          'in_stock' => boolean true
+          'carrier_list' => 
+            array (size=2)
+              ...
+
+// BONIFICO BANCARIO
+/var/www/html/modules/ghyzamsync/classes/GhyzamCatalog.php:322:
+object(Order)[263]
+  public 'id_address_delivery' => int 8
+  public 'id_address_invoice' => int 8
+  public 'id_shop_group' => int 1
+  public 'id_shop' => int 1
+  public 'id_cart' => int 62
+  public 'id_currency' => int 1
+  public 'id_lang' => int 1
+  public 'id_customer' => int 5
+  public 'id_carrier' => int 1
+  public 'current_state' => null
+  public 'secure_key' => string '4f06eb29bedd00fd212749c2685935f6' (length=32)
+  public 'payment' => string 'Bonifico bancario' (length=17)
+  public 'module' => string 'ps_wirepayment' (length=14)
+  public 'conversion_rate' => string '1.000000' (length=8)
+  public 'recyclable' => string '0' (length=1)
+  public 'gift' => int 0
+  public 'gift_message' => string '' (length=0)
+  public 'mobile_theme' => string '0' (length=1)
+  public 'shipping_number' => null
+  public 'total_discounts' => float 0
+  public 'total_discounts_tax_incl' => float 0
+  public 'total_discounts_tax_excl' => float 0
+  public 'total_paid' => float 36
+  public 'total_paid_tax_incl' => float 36
+  public 'total_paid_tax_excl' => float 29.51
+  public 'total_paid_real' => int 0
+  public 'total_products' => float 29.51
+  public 'total_products_wt' => float 36
+  public 'total_shipping' => float 0
+  public 'total_shipping_tax_incl' => float 0
+  public 'total_shipping_tax_excl' => float 0
+  public 'carrier_tax_rate' => float 22
+  public 'total_wrapping' => float 0
+  public 'total_wrapping_tax_incl' => float 0
+  public 'total_wrapping_tax_excl' => float 0
+  public 'invoice_number' => null
+  public 'delivery_number' => null
+  public 'invoice_date' => string '0000-00-00 00:00:00' (length=19)
+  public 'delivery_date' => string '0000-00-00 00:00:00' (length=19)
+  public 'valid' => null
+  public 'date_add' => string '2019-12-15 18:45:19' (length=19)
+  public 'date_upd' => string '2019-12-15 18:45:19' (length=19)
+  public 'reference' => string 'KIQCKBIMJ' (length=9)
+  public 'round_mode' => string '2' (length=1)
+  public 'round_type' => string '2' (length=1)
+  protected 'webserviceParameters' => 
+    array (size=5)
+      'objectMethods' => 
+        array (size=1)
+          'add' => string 'addWs' (length=5)
+      'objectNodeName' => string 'order' (length=5)
+      'objectsNodeName' => string 'orders' (length=6)
+      'fields' => 
+        array (size=17)
+          'id_address_delivery' => 
+            array (size=1)
+              ...
+          'id_address_invoice' => 
+            array (size=1)
+              ...
+          'id_cart' => 
+            array (size=1)
+              ...
+          'id_currency' => 
+            array (size=1)
+              ...
+          'id_lang' => 
+            array (size=1)
+              ...
+          'id_customer' => 
+            array (size=1)
+              ...
+          'id_carrier' => 
+            array (size=1)
+              ...
+          'current_state' => 
+            array (size=2)
+              ...
+          'module' => 
+            array (size=1)
+              ...
+          'invoice_number' => 
+            array (size=0)
+              ...
+          'invoice_date' => 
+            array (size=0)
+              ...
+          'delivery_number' => 
+            array (size=0)
+              ...
+          'delivery_date' => 
+            array (size=0)
+              ...
+          'valid' => 
+            array (size=0)
+              ...
+          'date_add' => 
+            array (size=0)
+              ...
+          'date_upd' => 
+            array (size=0)
+              ...
+          'shipping_number' => 
+            array (size=2)
+              ...
+      'associations' => 
+        array (size=1)
+          'order_rows' => 
+            array (size=4)
+              ...
+  protected '_taxCalculationMethod' => string '0' (length=1)
+  protected 'cacheCustomer' => null
+  public 'id' => string '42' (length=2)
+  public 'id_shop_list' => 
+    array (size=0)
+      empty
+  protected 'get_shop_from_context' => boolean true
+  protected 'table' => string 'orders' (length=6)
+  protected 'identifier' => string 'id_order' (length=8)
+  protected 'fieldsRequired' => 
+    array (size=14)
+      0 => string 'id_address_delivery' (length=19)
+      1 => string 'id_address_invoice' (length=18)
+      2 => string 'id_cart' (length=7)
+      3 => string 'id_currency' (length=11)
+      4 => string 'id_lang' (length=7)
+      5 => string 'id_customer' (length=11)
+      6 => string 'id_carrier' (length=10)
+      7 => string 'payment' (length=7)
+      8 => string 'module' (length=6)
+      9 => string 'total_paid' (length=10)
+      10 => string 'total_paid_real' (length=15)
+      11 => string 'total_products' (length=14)
+      12 => string 'total_products_wt' (length=17)
+      13 => string 'conversion_rate' (length=15)
+  protected 'fieldsSize' => 
+    array (size=0)
+      empty
+  protected 'fieldsValidate' => 
+    array (size=39)
+      'id_address_delivery' => string 'isUnsignedId' (length=12)
+      'id_address_invoice' => string 'isUnsignedId' (length=12)
+      'id_cart' => string 'isUnsignedId' (length=12)
+      'id_currency' => string 'isUnsignedId' (length=12)
+      'id_shop_group' => string 'isUnsignedId' (length=12)
+      'id_shop' => string 'isUnsignedId' (length=12)
+      'id_lang' => string 'isUnsignedId' (length=12)
+      'id_customer' => string 'isUnsignedId' (length=12)
+      'id_carrier' => string 'isUnsignedId' (length=12)
+      'current_state' => string 'isUnsignedId' (length=12)
+      'secure_key' => string 'isMd5' (length=5)
+      'payment' => string 'isGenericName' (length=13)
+      'module' => string 'isModuleName' (length=12)
+      'recyclable' => string 'isBool' (length=6)
+      'gift' => string 'isBool' (length=6)
+      'gift_message' => string 'isMessage' (length=9)
+      'mobile_theme' => string 'isBool' (length=6)
+      'total_discounts' => string 'isPrice' (length=7)
+      'total_discounts_tax_incl' => string 'isPrice' (length=7)
+      'total_discounts_tax_excl' => string 'isPrice' (length=7)
+      'total_paid' => string 'isPrice' (length=7)
+      'total_paid_tax_incl' => string 'isPrice' (length=7)
+      'total_paid_tax_excl' => string 'isPrice' (length=7)
+      'total_paid_real' => string 'isPrice' (length=7)
+      'total_products' => string 'isPrice' (length=7)
+      'total_products_wt' => string 'isPrice' (length=7)
+      'total_shipping' => string 'isPrice' (length=7)
+      'total_shipping_tax_incl' => string 'isPrice' (length=7)
+      'total_shipping_tax_excl' => string 'isPrice' (length=7)
+      'carrier_tax_rate' => string 'isFloat' (length=7)
+      'total_wrapping' => string 'isPrice' (length=7)
+      'total_wrapping_tax_incl' => string 'isPrice' (length=7)
+      'total_wrapping_tax_excl' => string 'isPrice' (length=7)
+      'round_mode' => string 'isUnsignedId' (length=12)
+      'round_type' => string 'isUnsignedId' (length=12)
+      'shipping_number' => string 'isTrackingNumber' (length=16)
+      'conversion_rate' => string 'isFloat' (length=7)
+      'date_add' => string 'isDate' (length=6)
+      'date_upd' => string 'isDate' (length=6)
+  protected 'fieldsRequiredLang' => 
+    array (size=0)
+      empty
+  protected 'fieldsSizeLang' => 
+    array (size=0)
+      empty
+  protected 'fieldsValidateLang' => 
+    array (size=0)
+      empty
+  protected 'tables' => 
+    array (size=0)
+      empty
+  protected 'image_dir' => null
+  protected 'image_format' => string 'jpg' (length=3)
+  protected 'translator' => null
+  protected 'def' => 
+    array (size=4)
+      'table' => string 'orders' (length=6)
+      'primary' => string 'id_order' (length=8)
+      'fields' => 
+        array (size=45)
+          'id_address_delivery' => 
+            array (size=3)
+              ...
+          'id_address_invoice' => 
+            array (size=3)
+              ...
+          'id_cart' => 
+            array (size=3)
+              ...
+          'id_currency' => 
+            array (size=3)
+              ...
+          'id_shop_group' => 
+            array (size=2)
+              ...
+          'id_shop' => 
+            array (size=2)
+              ...
+          'id_lang' => 
+            array (size=3)
+              ...
+          'id_customer' => 
+            array (size=3)
+              ...
+          'id_carrier' => 
+            array (size=3)
+              ...
+          'current_state' => 
+            array (size=2)
+              ...
+          'secure_key' => 
+            array (size=2)
+              ...
+          'payment' => 
+            array (size=3)
+              ...
+          'module' => 
+            array (size=3)
+              ...
+          'recyclable' => 
+            array (size=2)
+              ...
+          'gift' => 
+            array (size=2)
+              ...
+          'gift_message' => 
+            array (size=2)
+              ...
+          'mobile_theme' => 
+            array (size=2)
+              ...
+          'total_discounts' => 
+            array (size=2)
+              ...
+          'total_discounts_tax_incl' => 
+            array (size=2)
+              ...
+          'total_discounts_tax_excl' => 
+            array (size=2)
+              ...
+          'total_paid' => 
+            array (size=3)
+              ...
+          'total_paid_tax_incl' => 
+            array (size=2)
+              ...
+          'total_paid_tax_excl' => 
+            array (size=2)
+              ...
+          'total_paid_real' => 
+            array (size=3)
+              ...
+          'total_products' => 
+            array (size=3)
+              ...
+          'total_products_wt' => 
+            array (size=3)
+              ...
+          'total_shipping' => 
+            array (size=2)
+              ...
+          'total_shipping_tax_incl' => 
+            array (size=2)
+              ...
+          'total_shipping_tax_excl' => 
+            array (size=2)
+              ...
+          'carrier_tax_rate' => 
+            array (size=2)
+              ...
+          'total_wrapping' => 
+            array (size=2)
+              ...
+          'total_wrapping_tax_incl' => 
+            array (size=2)
+              ...
+          'total_wrapping_tax_excl' => 
+            array (size=2)
+              ...
+          'round_mode' => 
+            array (size=2)
+              ...
+          'round_type' => 
+            array (size=2)
+              ...
+          'shipping_number' => 
+            array (size=2)
+              ...
+          'conversion_rate' => 
+            array (size=3)
+              ...
+          'invoice_number' => 
+            array (size=1)
+              ...
+          'delivery_number' => 
+            array (size=1)
+              ...
+          'invoice_date' => 
+            array (size=1)
+              ...
+          'delivery_date' => 
+            array (size=1)
+              ...
+          'valid' => 
+            array (size=1)
+              ...
+          'reference' => 
+            array (size=1)
+              ...
+          'date_add' => 
+            array (size=2)
+              ...
+          'date_upd' => 
+            array (size=2)
+              ...
+      'classname' => string 'Order' (length=5)
+  protected 'update_fields' => null
+  public 'force_id' => boolean false
+  public 'product_list' => 
+    array (size=1)
+      0 => 
+        array (size=71)
+          'id_product_attribute' => string '0' (length=1)
+          'id_product' => string '294' (length=3)
+          'cart_quantity' => string '1' (length=1)
+          'id_shop' => string '1' (length=1)
+          'id_customization' => null
+          'name' => string 'RINOWASH KIT AZZ CAMPANA UNIV' (length=29)
+          'is_virtual' => string '0' (length=1)
+          'description_short' => string 'AEROSOL PER ALTE VIE RESPIRATORIA RINOWASH AZZURRO 471221 CON CAMPANA UNIVERSALE' (length=80)
+          'available_now' => string '1' (length=1)
+          'available_later' => string '' (length=0)
+          'id_category_default' => string '12' (length=2)
+          'id_supplier' => string '0' (length=1)
+          'id_manufacturer' => string '6' (length=1)
+          'manufacturer_name' => string 'AIR LIQUIDE MEDICAL SYST. SpA' (length=29)
+          'on_sale' => string '0' (length=1)
+          'ecotax' => string '0.000000' (length=8)
+          'additional_shipping_cost' => string '0.00' (length=4)
+          'available_for_order' => string '1' (length=1)
+          'show_price' => string '1' (length=1)
+          'price' => float 29.51
+          'active' => string '1' (length=1)
+          'unity' => string '' (length=0)
+          'unit_price_ratio' => string '0.000000' (length=8)
+          'quantity_available' => string '3325' (length=4)
+          'width' => string '0.000000' (length=8)
+          'height' => string '0.000000' (length=8)
+          'depth' => string '0.000000' (length=8)
+          'out_of_stock' => string '2' (length=1)
+          'weight' => float 0
+          'available_date' => string '0000-00-00' (length=10)
+          'date_add' => string '2019-08-16 17:40:43' (length=19)
+          'date_upd' => string '2019-09-26 11:09:02' (length=19)
+          'quantity' => int 1
+          'link_rewrite' => string 'rinowash-kit-azz-campana-univ' (length=29)
+          'category' => string 'dispositivi-medici' (length=18)
+          'unique_id' => string '0000000294000000000080' (length=22)
+          'id_address_delivery' => string '8' (length=1)
+          'advanced_stock_management' => string '0' (length=1)
+          'supplier_reference' => null
+          'customization_quantity' => null
+          'price_attribute' => null
+          'ecotax_attr' => null
+          'reference' => string '904734643' (length=9)
+          'weight_attribute' => null
+          'ean13' => string '8015662712217' (length=13)
+          'isbn' => string '' (length=0)
+          'upc' => string '' (length=0)
+          'minimal_quantity' => string '1' (length=1)
+          'wholesale_price' => string '0.000000' (length=8)
+          'id_image' => string '294-295' (length=7)
+          'legend' => string '' (length=0)
+          'reduction_type' => int 0
+          'is_gift' => boolean false
+          'reduction' => float 0
+          'price_without_reduction' => float 36.0022
+          'specific_prices' => 
+            array (size=0)
+              ...
+          'stock_quantity' => int 3325
+          'price_with_reduction' => float 36.0022
+          'price_with_reduction_without_tax' => float 29.51
+          'total' => float 29.51
+          'total_wt' => float 36
+          'price_wt' => float 36.0022
+          'reduction_applies' => boolean false
+          'quantity_discount_applies' => boolean false
+          'allow_oosp' => int 0
+          'features' => 
+            array (size=0)
+              ...
+          'rate' => float 22
+          'tax_name' => string 'IVA IT 22%' (length=10)
+          'warehouse_list' => 
+            array (size=1)
+              ...
+          'in_stock' => boolean true
+          'carrier_list' => 
+            array (size=2)
+              ...

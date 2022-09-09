@@ -82,10 +82,15 @@ class GhyzamCatalog {
             $product->add();
 
             
-
+        Shop::setContext(Shop::CONTEXT_SHOP, null);
         StockAvailable::setQuantity($product->id, 
             (int)Tools::getValue('id_product_attribute'), 
             (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0));
+
+
+        /*
+        $adminProductWrapper->processQuantityUpdate($product, $_POST['qty_0']);
+        */
         
         if (!$update_mode)
             $this->addPSProductImage($product->id, $this->returnDefaultIfNotSet($rd_product, 'UrlImmagine', false, true));

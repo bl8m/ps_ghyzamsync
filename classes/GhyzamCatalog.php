@@ -84,7 +84,7 @@ class GhyzamCatalog {
             
         // Shop::setContext(Shop::CONTEXT_SHOP, Shop::getContextShopID() );
         StockAvailable::setQuantity((int)$product->id, 0, $product->quantity, Context::getContext()->shop->id);
-
+        $product->update();
 
         /*
         $adminProductWrapper->processQuantityUpdate($product, $_POST['qty_0']);

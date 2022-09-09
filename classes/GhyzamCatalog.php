@@ -268,7 +268,7 @@ class GhyzamCatalog {
 
         // ricostruisco l'indice
 
-        $index_url = Tools::getHttpHost(true, true) . __PS_BASE_URI__ . basename(_PS_ADMIN_DIR_) .'index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=8zw3ddam&id_shop=1';
+        $index_url = Tools::getHttpHost(true, true) . __PS_BASE_URI__ . 'admin160966vip' .'/index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=8zw3ddam&id_shop=1';
 
         return ['tot_sync' => count($rd_products), 'synced_ref' => $synced, 
                 'tot_del' => count($deleted), 'deleted_ref' => $deleted, 

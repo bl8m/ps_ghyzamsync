@@ -10,6 +10,9 @@ class GhyzamCatalog {
     private $default_document_id = 'PS_B2C';
     private $update_last_edit_look = '-1 days';
     private $update_deleted = true;
+
+
+    public $log = [];
     // Associa i metodi di pagamento di Prestashop a campi di RD04
     private $paymentsToRDVals = [
         'ps_checkpayment' => ['toPayment' => 'CA', 'toPaymentCode' => 'CA', 'toStatus' => 1], // Assegno
@@ -62,6 +65,13 @@ class GhyzamCatalog {
 
         // Non funziona?
         $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'DisponibilitaSede', 0);
+
+
+        if( empty( $this->log['products'] ) )
+            $this->log['products'] = [];
+
+
+        $this->log['products'][$rd_product['CodiceArticolo']] = $rd_product['DisponibilitaSede'];
 
         $product->show_price = 1;
         $product->minimal_quantity = 1;

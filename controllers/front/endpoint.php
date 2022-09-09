@@ -25,6 +25,7 @@ Class ghyzamsyncEndpointModuleFrontController extends ModuleFrontController
                         $result['status'] = 'ok';
                         $result['message'] = 'Synced latest products successfully';
                         $result['result'] = $f_result;
+                        $result['log'] = $catalog_service->log;
                         break;
                     case 'syncAllProducts':
                         $f_result = $catalog_service->syncProducts(true);
@@ -51,6 +52,7 @@ Class ghyzamsyncEndpointModuleFrontController extends ModuleFrontController
         $catalog_service->end();
 
         GhyzamSync::writeLog('Endpoint called', $result);
+        header('Content-type: application/json');
         echo json_encode($result);
     }
 }

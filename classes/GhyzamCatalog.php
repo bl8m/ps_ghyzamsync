@@ -265,9 +265,16 @@ class GhyzamCatalog {
         // SP da chiamare a fine importazione
         $this->service->execProcedure('AGE_SP_FINE_IMPORTAZIONE');
 
+
+        // ricostruisco l'indice
+
+        $index_url = _PS_BASE_URL_.'admin160966vip/index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=8zw3ddam&id_shop=1';
+
         return ['tot_sync' => count($rd_products), 'synced_ref' => $synced, 
                 'tot_del' => count($deleted), 'deleted_ref' => $deleted, 
-                'synced_since' => ($sync_all ? 'always' : $sync_since)];
+                'synced_since' => ($sync_all ? 'always' : $sync_since),
+                'index_url' => $index_url,
+            ];
     }
 
     // TODO Esegue il sync dello stato degli ordini attivi da RD04 a Prestashop

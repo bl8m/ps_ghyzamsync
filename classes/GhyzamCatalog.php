@@ -67,15 +67,8 @@ class GhyzamCatalog {
 
         // Non funziona?
         // $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'DisponibilitaSede', 0);
-        $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0);
+        // $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0);
 
-/*
-        if( empty( $this->log['products'] ) )
-            $this->log['products'] = [];
-
-
-        $this->log['products'][$rd_product['CodiceArticolo']] = $rd_product['DisponibilitaSede'];
-        */
 
         $product->show_price = 1;
         $product->minimal_quantity = 1;
@@ -88,9 +81,11 @@ class GhyzamCatalog {
         else
             $product->add();
 
+            
+
         StockAvailable::setQuantity($product->id, 
             (int)Tools::getValue('id_product_attribute'), 
-            (int)$this->returnDefaultIfNotSet($rd_product, 'DisponibilitaSede', 0));
+            (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0));
         
         if (!$update_mode)
             $this->addPSProductImage($product->id, $this->returnDefaultIfNotSet($rd_product, 'UrlImmagine', false, true));

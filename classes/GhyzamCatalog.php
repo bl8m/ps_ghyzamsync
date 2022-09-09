@@ -67,7 +67,7 @@ class GhyzamCatalog {
 
         // Non funziona?
         // $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'DisponibilitaSede', 0);
-        // $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0);
+        $product->quantity = (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0);
 
 
         $product->show_price = 1;

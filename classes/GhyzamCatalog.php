@@ -82,10 +82,8 @@ class GhyzamCatalog {
             $product->add();
 
             
-        Shop::setContext(Shop::CONTEXT_SHOP, Shop::getContextShopID() );
-        StockAvailable::setQuantity($product->id, 
-            (int)Tools::getValue('id_product_attribute'), 
-            (int)$this->returnDefaultIfNotSet($rd_product, 'QtaDispon', 0));
+        // Shop::setContext(Shop::CONTEXT_SHOP, Shop::getContextShopID() );
+        StockAvailable::setQuantity((int)$product->id, 0, $product->quantity, Context::getContext()->shop->id);
 
 
         /*

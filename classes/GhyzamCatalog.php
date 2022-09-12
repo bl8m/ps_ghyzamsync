@@ -97,10 +97,12 @@ class GhyzamCatalog {
     }
 
     // Ottiene una lista di prodotti dal DB remoto
-    public function getRDRemoteProducts($check_updated = false) {
+    public function getRDRemoteProducts($only_updated = false) {
         $opt = [];
-        if ($check_updated)
+
+        if ($only_updated)
             $opt = ['FlagUpdated' => 1];
+
         return $this->service->execProcedure('AGE_SP_ESTRAI_DATI_ARTICOLI', $opt, true, false);
     }
 
@@ -128,7 +130,7 @@ class GhyzamCatalog {
         ,[ScontoLordo],[ScontoNetto],[MinimoOrdinabile],[GruppoMinimo],[Note],[PercentualeRicaricoB],[ListinoWebB],[ScontoLordoB],[ScontoNettoB]
         ,[CodiceListinoRiferimento],[NoteWeb],[Categoria],[ListinoWebCopia],[ListinoWebCopiaB],[NonPubblicare],[DisponibilitaSede]
         ,[PrezzoFornitore],[ScontoAcquistoLordoPrezzoFornitore],[ScontoAcquistoNettoPrezzoFornitore],[Barcode],[DescrizioneWeb],[SchedaDescrittiva]
-        ,[UrlImmagine],[ProdottoPrenotabile] FROM [age_listini_web_dettaglio] WHERE [CodiceArticolo] IN (' . $ref_string . ')');
+        ,[UrlImmagine],[ProdottoPrenotabile] FROM [age_listini_web_dettaglio] WHERE [CodiceArticolo] IN (' . $ref_string . ') AND [NonPubblicare] <> 1 ');
     }
 
     // Crea un nuovo record categoria se non esiste nel DB
@@ -193,7 +195,7 @@ class GhyzamCatalog {
     }
 
     // Ottiene un id prodotto per campo reference
-    public function getPSProductByRefrence($reference) {
+    public function getPSProductByReference($reference) {
         $row = Db::getInstance()->getRow('SELECT `id_product` FROM ' . _DB_PREFIX_ . 'product WHERE `reference` = \'' . pSQL($reference) . '\'');
 
         return $this->returnDefaultIfNotSet($row, 'id_product', false);
@@ -235,7 +237,7 @@ class GhyzamCatalog {
         $this->service->execProcedure('AGE_SP_INIZIO_IMPORTAZIONE');
         $rd_products = $this->getRDRemoteProducts(!$sync_all);
         foreach ($rd_products as $product) {
-            $ps_product_id = $this->getPSProductByRefrence($product['CodiceArticolo']);
+            $ps_product_id = $this->getPSProductByReference($product['CodiceArticolo']);
             
             if ($ps_product_id) {
                 // Update prodotto
@@ -298,7 +300,7 @@ class GhyzamCatalog {
         $remote_prods = $this->getRDSelectedRemoteProducts($cart, 'reference');
 
         foreach ($remote_prods as $prod) {
-            StockAvailable::setQuantity($this->getPSProductByRefrence($this->returnDefaultIfNotSet($prod, 'CodiceArticolo')), 
+            StockAvailable::setQuantity($this->getPSProductByReference($this->returnDefaultIfNotSet($prod, 'CodiceArticolo')), 
                 (int)Tools::getValue('id_product_attribute'), 
                 (int)$this->returnDefaultIfNotSet($prod, 'DisponibilitaSede', 0));
         }

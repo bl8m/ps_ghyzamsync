@@ -21,7 +21,7 @@ Class ghyzamsyncEndpointModuleFrontController extends ModuleFrontController
             if (isset($_GET['fn'])) {
                 switch ($_GET['fn']) {
                     case 'syncProducts':
-                        $f_result = $catalog_service->syncProducts();
+                        $f_result = $catalog_service->syncProducts( @$_GET['all'] == '1' );
                         $result['status'] = 'ok';
                         $result['message'] = 'Synced latest products successfully';
                         $result['result'] = $f_result;
